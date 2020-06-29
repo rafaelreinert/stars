@@ -13,6 +13,7 @@ prune:
 
 test:
 	docker-compose up -d db
+	go clean -testcache
 	go test -p 1 ./...
 	docker-compose down
 	

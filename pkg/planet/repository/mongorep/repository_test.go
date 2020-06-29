@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rafaelreinert/starts/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet"
 	"github.com/stretchr/testify/assert"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

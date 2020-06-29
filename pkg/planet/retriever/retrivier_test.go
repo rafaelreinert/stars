@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/rafaelreinert/starts/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet"
 	"github.com/stretchr/testify/assert"
 )
 

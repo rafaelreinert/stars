@@ -9,8 +9,8 @@ import (
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
-	"github.com/rafaelreinert/starts/pkg/planet"
-	"github.com/rafaelreinert/starts/pkg/planet/retriever"
+	"github.com/rafaelreinert/stars/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet/retriever"
 )
 
 func (s *Server) handler() http.Handler {

@@ -1,4 +1,4 @@
-module github.com/rafaelreinert/starts
+module github.com/rafaelreinert/stars
 
 go 1.14
 

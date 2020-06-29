@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"github.com/rafaelreinert/starts/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet"
 )
 
 type PlanetRepository interface {

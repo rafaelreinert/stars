@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	"github.com/rafaelreinert/starts/pkg/planet"
-	"github.com/rafaelreinert/starts/pkg/planet/repository"
+	"github.com/rafaelreinert/stars/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet/repository"
 )
 
 type PlanetAppearancesOnMoviesCounter interface {

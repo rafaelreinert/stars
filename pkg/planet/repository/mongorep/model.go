@@ -1,7 +1,7 @@
 package mongorep
 
 import (
-	"github.com/rafaelreinert/starts/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 

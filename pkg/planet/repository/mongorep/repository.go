@@ -3,8 +3,8 @@ package mongorep
 import (
 	"context"
 
-	"github.com/rafaelreinert/starts/pkg/planet"
-	"github.com/rafaelreinert/starts/pkg/planet/repository"
+	"github.com/rafaelreinert/stars/pkg/planet"
+	"github.com/rafaelreinert/stars/pkg/planet/repository"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

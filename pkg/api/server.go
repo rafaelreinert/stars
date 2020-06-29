@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/rafaelreinert/starts/pkg/config"
-	"github.com/rafaelreinert/starts/pkg/planet/repository"
-	"github.com/rafaelreinert/starts/pkg/planet/retriever"
+	"github.com/rafaelreinert/stars/pkg/config"
+	"github.com/rafaelreinert/stars/pkg/planet/repository"
+	"github.com/rafaelreinert/stars/pkg/planet/retriever"
 )
 
 type Server struct {
