@@ -5,14 +5,14 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
-type PlanetMongoModel struct {
+type planetMongoModel struct {
 	ID      primitive.ObjectID `bson:"_id,omitempty"`
 	Name    string             `bson:"name,omitempty"`
 	Climate string             `bson:"climate,omitempty"`
 	Terrain string             `bson:"terrain,omitempty"`
 }
 
-func (p PlanetMongoModel) ToPlanet() planet.Planet {
+func (p planetMongoModel) ToPlanet() planet.Planet {
 	return planet.Planet{
 		ID:      p.ID.Hex(),
 		Name:    p.Name,

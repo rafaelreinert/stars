@@ -8,7 +8,7 @@ import (
 )
 
 func TestToPlanet(t *testing.T) {
-	model := PlanetMongoModel{
+	model := planetMongoModel{
 		ID:      primitive.NewObjectID(),
 		Name:    "Tatooine",
 		Climate: "arid",
