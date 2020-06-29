@@ -12,6 +12,7 @@ type planetMongoModel struct {
 	Terrain string             `bson:"terrain,omitempty"`
 }
 
+// ToPlanet convert the planetMongoModel to a Planet
 func (p planetMongoModel) ToPlanet() planet.Planet {
 	return planet.Planet{
 		ID:      p.ID.Hex(),

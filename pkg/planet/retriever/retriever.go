@@ -8,10 +8,12 @@ import (
 	"github.com/rafaelreinert/stars/pkg/planet/repository"
 )
 
+// PlanetAppearancesOnMoviesCounter defines the interface to retive the planet appearances on StarWars movies
 type PlanetAppearancesOnMoviesCounter interface {
 	CountPlanetAppearancesOnMovies(context.Context, string) (int, error)
 }
 
+// RetrivePlanet finds a planet on database using id, then fill the planet with the appearances on movies
 func RetrivePlanet(ctx context.Context, id string, counter PlanetAppearancesOnMoviesCounter, rep repository.PlanetFinder) (planet.Planet, error) {
 	p, err := rep.FindByID(ctx, id)
 	if err != nil {
@@ -20,6 +22,7 @@ func RetrivePlanet(ctx context.Context, id string, counter PlanetAppearancesOnMo
 	return fillNumberOfAppearancesOnMovies(ctx, p, counter)
 }
 
+// RetrivePlanetByName finds a planet on database using name, then fills the planet with the appearances on movies
 func RetrivePlanetByName(ctx context.Context, name string, counter PlanetAppearancesOnMoviesCounter, rep repository.PlanetFinder) (planet.Planet, error) {
 	p, err := rep.FindByName(ctx, name)
 	if err != nil {
@@ -28,6 +31,7 @@ func RetrivePlanetByName(ctx context.Context, name string, counter PlanetAppeara
 	return fillNumberOfAppearancesOnMovies(ctx, p, counter)
 }
 
+// RetriveAllPlanets finds all planets on database then fills the planets with the appearances on movies
 func RetriveAllPlanets(ctx context.Context, counter PlanetAppearancesOnMoviesCounter, rep repository.PlanetFinder) ([]planet.Planet, error) {
 	planets, err := rep.FindAll(ctx)
 	if err != nil {

@@ -31,7 +31,7 @@ func TestServer(t *testing.T) {
 
 	s := Server{
 		PlanetRepository: mongorep.NewMongoRepository(mongoClient.Database("starwars")),
-		CountRetriever:   swapi.SWAPI{ApiURL: swapiServer.URL},
+		CountRetriever:   swapi.SWAPI{APIURL: swapiServer.URL},
 		Cfg:              config.Config{Port: 8080},
 	}
 

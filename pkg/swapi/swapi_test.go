@@ -14,7 +14,7 @@ func TestCountPlanetAppearancesOnMoviesWithAValidPlanet(t *testing.T) {
 	ts := initTestServer()
 	defer ts.Close()
 
-	count, err := SWAPI{ApiURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Tatooine")
+	count, err := SWAPI{APIURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Tatooine")
 
 	assert.NoError(t, err)
 	assert.Equal(t, 5, count, "The Number of Movies should be 5")
@@ -24,7 +24,7 @@ func TestCountPlanetAppearancesOnMoviesWithAnInvalidPlanet(t *testing.T) {
 	ts := initTestServer()
 	defer ts.Close()
 
-	count, err := SWAPI{ApiURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Tatoo")
+	count, err := SWAPI{APIURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Tatoo")
 
 	assert.NoError(t, err)
 	assert.Equal(t, 0, count, "The Number of Movies should be 0")
@@ -34,7 +34,7 @@ func TestCountPlanetAppearancesOnMoviesWithAnInexistentPlanet(t *testing.T) {
 	ts := initTestServer()
 	defer ts.Close()
 
-	count, err := SWAPI{ApiURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Pluto")
+	count, err := SWAPI{APIURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Pluto")
 
 	assert.NoError(t, err)
 	assert.Equal(t, 0, count, "The Number of Movies should be 0")
@@ -44,7 +44,7 @@ func TestCountPlanetAppearancesOnMoviesWhenAPIReturnMultiplesPlanets(t *testing.
 	ts := initTestServer()
 	defer ts.Close()
 
-	count, err := SWAPI{ApiURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Yavin")
+	count, err := SWAPI{APIURL: ts.URL}.CountPlanetAppearancesOnMovies(context.Background(), "Yavin")
 
 	assert.NoError(t, err)
 	assert.Equal(t, 1, count, "The Number of Movies should be 1")

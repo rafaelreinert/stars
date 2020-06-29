@@ -18,13 +18,14 @@ type planetResponse struct {
 	Films []string `json:"films"`
 }
 
+// SWAPI is the struct used to access the StarWars API
 type SWAPI struct {
-	ApiURL string
+	APIURL string
 }
 
 // CountPlanetAppearancesOnMovies retrivies the planet on swapi and return the number of movies with the planet appearance
 func (s SWAPI) CountPlanetAppearancesOnMovies(ctx context.Context, planetName string) (int, error) {
-	req, err := http.NewRequestWithContext(ctx, http.MethodGet, fmt.Sprintf("%s/planets/?search=%s", s.ApiURL, url.QueryEscape(planetName)), nil)
+	req, err := http.NewRequestWithContext(ctx, http.MethodGet, fmt.Sprintf("%s/planets/?search=%s", s.APIURL, url.QueryEscape(planetName)), nil)
 	if err != nil {
 		return 0, err
 	}
